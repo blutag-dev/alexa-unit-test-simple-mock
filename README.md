@@ -12,7 +12,8 @@ A lot of examples on the bespoken site including this simple example https://git
 
 
 ###### Running Tests
-`npm install`
-`npm run test`
+```npm install
+npm run test```
+
 
 
