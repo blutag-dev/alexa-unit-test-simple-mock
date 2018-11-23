@@ -10,9 +10,6 @@ A lot of examples on the bespoken site including this simple example https://git
 * [Chai](http://chaijs.com/) - Assertion framework
 * [Virtual Alexa](https://github.com/bespoken/virtual-alexa) - Alexa emulator
 
-###### Code Coverage Pieces
-* [nyc](https://github.com/istanbuljs/nyc) - Local code coverage
-* [CodeCov](https://codecov.io) - Hosted code coverage
 
 ###### Running Tests
 `npm install`
