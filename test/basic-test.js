@@ -32,17 +32,28 @@ describe("Test the hello world skill", function () {
 		}, 500);
 	});
 
-	it("Should launch the skill and get the correct", function (done) {
+	it("Should launch the skill and get the correct welcome", function (done) {
 		alexa.launch().then((resp) => {
 			expect(resp.response.outputSpeech.ssml).to.contain('I am ' + name + ', welcome to the Alexa Skills Kit!');
 			done();
 		})
 	});
 
-	it("Should utter hello and get a response", function (done) {
+	it("Should launch the skill and get the correct welcome using async and await", async function () {
+		const resp = await alexa.launch();
+		expect(resp.response.outputSpeech.ssml).to.contain('I am ' + name + ', welcome to the Alexa Skills Kit!')
+	});
+
+
+	it("Should utter hello and get the correct response", function (done) {
 		alexa.utter("hello").then((result) => {
 			expect(result.response.outputSpeech.ssml).to.include("Hello World from " + name);
 			done();
 		});
+	});
+
+	it("Should utter hello and get the correct response using async and await", async function () {
+		const resp = await alexa.utter("hello");
+		expect(resp.response.outputSpeech.ssml).to.include("Hello World from " + name);
 	});
 })
